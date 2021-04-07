@@ -1,0 +1,14 @@
+<title>TypedArray Endian</title>
+<body>
+    You are... <div id="result"></div>
+    <script>
+        const arr = new Uint16Array(1)
+        arr[0] = 1
+        const u8 = new Uint8Array(arr.buffer)
+        if (u8[0]) {
+            result.innerText = "Little Endian."
+        } else {
+            result.innerText = "Big Endian!! WOW!!!"
+        }
+    </script>
+</body>
